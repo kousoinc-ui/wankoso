@@ -9,18 +9,18 @@
   <style>
     
     :root{
-      --brand:#2c6e49;/*深めの安心グリーン*/
-      --brand-acc:#f4a261;/*アクセント*/
+      --brand-acc:#8ccd9c;/*深めの安心グリーン*/
+      --brand:#db884c;/*アクセント*/
       --ink:#1b1b1b;
       --muted:#6b7280;
-      --bg:#fff;
+      --bg:#ffe7af;
       --bg-alt:#f8fafc;
       --radius:16px;
       --shadow:0 10px 30px rgba(0,0,0,.08);
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
-    body{margin:0;font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", Meiryo, Arial, sans-serif;color:var(--ink);background:var(--bg);background-color: #ECE1C1;}
+    body{margin:0;font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", Meiryo, Arial, sans-serif;color:var(--ink);background:var(--bg);}
     a{color:var(--brand);text-decoration:none}
     img{max-width:100%;display:block;height:auto}
     .container{width:min(1100px, 92vw);margin-inline:auto}
@@ -39,7 +39,7 @@
     header .links{display:flex;gap:18px;flex-wrap:wrap}
     header .links a{color:#fff;font-weight:600}
     .section{padding:56px 0}
-    .section h2{font-size:clamp(24px,2.8vw,32px);margin:0 0 16px;font-weight:800;line-height:1.3;color:#1c1c1c;}
+    .section h2{font-size:clamp(24px,2.8vw,32px);margin:0 0 16px;font-weight:800;line-height:1.3;color:#9b5353;}
     .section p{color:#111827d9;font-size:1.05rem;line-height:1.7;color:#111827cc}
     .features{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
     .card{background:#fff;border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
@@ -65,13 +65,99 @@
       header .links{display:none}
       .hero-card{padding:14px}
     }
+    /* コンテナ：スマホの余白＆アンカー位置補正 */
+.container{
+  width:min(1100px,94vw);
+  margin-inline:auto;
+  padding-inline:0.5rem;
+  scroll-margin-top:68px;
+}
+
+/* ヘッダー：高さ短め＆少しだけブラー */
+header.nav{
+  position:sticky; top:0; z-index:20;
+  background:#9b4a28; color:#fff; height:56px;
+  border-bottom:1px solid #eef2f7;
+  backdrop-filter:saturate(1.2) blur(4px);
+}
+header .nav-inner{
+  display:flex; align-items:center; justify-content:space-between;
+  gap:12px; height:56px; padding-block:6px;
+}
+
+/* FV：全面・中央寄せ・暗幕 */
+.hero{
+  position:relative; isolation:isolate; padding:0; margin:0; width:100%;
+  min-height:100vh; display:flex; align-items:center; justify-content:center;
+  overflow:hidden; background:#000;
+}
+.hero-grid{
+  position:relative; width:100%; height:100%;
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  text-align:center; padding:56px 16px 24px;
+}
+.hero h1{
+  font-size:clamp(28px,7vw,40px);
+  line-height:1.25; margin:8px 0 6px; font-weight:800; color:#fff;
+  text-shadow:0 2px 8px rgba(0,0,0,.35);
+}
+.hero p.lead{
+  font-size:clamp(16px,4.2vw,20px);
+  color:#fff; font-weight:700; line-height:1.65; margin-bottom:14px;
+  text-shadow:0 2px 6px rgba(0,0,0,.35);
+}
+
+/* カードグリッド：モバイル1 → タブ2 → PC4 */
+.features{ display:grid; grid-template-columns:1fr; gap:14px; }
+@media (min-width:768px){ .features{ grid-template-columns:repeat(2,1fr); } }
+@media (min-width:1024px){ .features{ grid-template-columns:repeat(4,1fr); } }
+
+/* 2カラムの段組み：モバイル1 → PC2 */
+.grid-2{ display:grid; grid-template-columns:1fr; gap:22px; align-items:start; }
+@media (min-width:960px){ .grid-2{ grid-template-columns:1fr 1fr; gap:32px; align-items:center; } }
+
+/* フッター上の固定CTA：親指タップしやすく */
+.sticky-cta{
+  position:fixed; left:50%; transform:translateX(-50%); bottom:8px; z-index:30;
+  width:min(1100px,94vw); padding-bottom:env(safe-area-inset-bottom);
+}
+.sticky-cta .bar{
+  display:flex; gap:12px; align-items:center; justify-content:center;
+  background:#fff; border:1px solid #e5e7eb; padding:12px 14px;
+  border-radius:16px; box-shadow:var(--shadow);
+}
+
+/* スマホのタップ最適化：ボタンを全幅に */
+@media (max-width:560px){
+  header .links{ display:none; }
+  .btn--block{ width:100%; }
+  .btn{ min-height:48px; font-size:1rem; }
+}
+/* スマホでも横並びにする（Approach セクション専用） */
+.grid-2--mobile-2col{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap:14px;
+  align-items:center;
+}
+@media (max-width:360px){
+  .grid-2--mobile-2col{
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+  }
+}
+.grid-2--mobile-2col .card img{
+  width:100%;
+  height:auto;
+}
+
   </style>
 </head>
 <body>
   <header class="nav">
     <div class="container nav-inner">
       <a href="#top" aria-label="わん酵素 ホーム" class="brand" style="display:flex;align-items:center;gap:10px">
-        <img src="assets/logo.svg" alt="ブランドロゴ" width="28" height="28" />
+        <img src="img/logo.jpg" alt="ブランドロゴ" width="28" height="28" />
         <strong>わん酵素</strong>
       </a>
       <nav class="links" aria-label="主要リンク">
@@ -93,10 +179,17 @@
           <h1 id="hero-title">発酵のプロが作る<br>腎臓に特化した発酵食品</h1>
           <p class="lead">大切なあなたのワンちゃんに</p>
           <a href="#purchase" class="btn" aria-label="10mL×5包セットを購入する">10mL×5包セットを購入する</a>
-          <p style="margin-top:8px;color:var(--muted)">初回限定ではありません／トライアル600円（税別）</p>
         </div>
         <div>
-          <div class="hero-bg" style="position:absolute;inset:0;z-index:-1;"><img src="img/test.jpg" alt="愛犬とわん酵素の商品写真" style="width:100%;height:100%;object-fit:cover;" /></div>
+            <div class="hero-bg" style="position:absolute;inset:0;z-index:-1;">
+            <img src="img/test.jpg"
+                alt="愛犬とわん酵素の商品写真"
+                style="width:100%;height:100%;object-fit:cover;"
+                loading="eager" />
+            <div style="position:absolute;inset:0;
+                        background:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,.35));">
+            </div>
+            </div>
         </div>
       </div>
     </section>
@@ -118,7 +211,7 @@
 
     <!-- Approach -->
     <section class="section" aria-labelledby="approach-title" style="background:var(--bg-alt)">
-      <div class="container grid-2">
+      <div class="container grid-2 grid-2--mobile-2col">
         <div>
           <h2 id="approach-title">腎臓ケアは「腸から整える」時代へ。</h2>
           <p>腎臓は体内の老廃物を処理する重要な臓器。腸内環境が乱れると有害物質が増え、腎臓に余計な負担がかかります。わん酵素は、発酵の力で腸から整え、腎臓への負担軽減をサポートします。</p>
@@ -130,7 +223,7 @@
           </ul>
         </div>
         <div class="card">
-          <img src="img/test.jpg" alt="腸と腎臓の関係イラスト" />
+          <img src="img/hakko.png" alt="腸と腎臓の関係イラスト"width="50%" height="50%" loading="lazy" />
         </div>
       </div>
     </section>
@@ -153,7 +246,7 @@
             <p>鶏肉粉末（チキン風味）</p>
           </div>
           <div class="card">
-            <img src="img/test.jpg" alt="配合素材のイメージ"/>
+            <img src="img/test.jpg" alt="配合素材のイメージ" loading="lazy">
             <p style="color:var(--muted);margin-top:8px">※配合はイメージです。詳細は商品表示をご確認ください。</p>
           </div>
         </div>
@@ -186,7 +279,7 @@
           <p>わん酵素は、生まれつき病気を抱えた一匹のワンちゃんが“主人公”。薬やサプリに頼っても体調が安定しない日々。「少しでも楽にしてあげたい」という家族の想いから、発酵の専門家と共にレシピ開発が始まりました。素材、発酵期間、風味、安全性を繰り返し検証し、完成までに3年。飲み続けた結果、ワンちゃんは以前のように元気を取り戻し、薬に頼らず過ごせるほどに回復。この経験をもとに、腎臓で悩むワンちゃんの力になりたいという願いから商品化されました。</p>
         </div>
         <div class="card">
-          <img src="img/test.jpg" alt="家族と犬の温かな写真"/>
+          <img src="img/test.jpg" alt="家族と犬の温かな写真" loading="lazy">
         </div>
       </div>
     </section>
@@ -216,13 +309,18 @@
     <section class="section" id="purchase" aria-labelledby="purchase-title">
       <div class="container grid-2">
         <div class="card">
-          <img src="img/test.jpg" alt="わん酵素商品写真" />
+          <img src="img/test.jpg" alt="わん酵素商品写真" loading="lazy">
         </div>
         <div>
           <h2 id="purchase-title">商品情報・ご購入</h2>
           <p class="price">600円（税別）／10mL×5包セット</p>
           <p class="muted">配送：メール便対応・初回限定ではありません</p>
-          <div class="badges" style="margin:12px 0 20px">$1</div>
+          <div class="badges" style="margin:12px 0 20px">
+            <span class="pill">国産</span>
+            <span class="pill">無添加</span>
+            <span class="pill">チキン風味</span>
+          </div>
+
           <p style="margin:6px 0;color:var(--muted)"><strong>販売者：</strong>コロヒロチロ</p>
           <a href="https://corohirotiro.base.shop/items/123829741" class="btn" aria-label="カートに入れる">カートに入れる</a>
           <a href="#faq" class="btn btn--ghost" style="margin-left:8px" aria-label="FAQを読む">FAQを読む</a>
