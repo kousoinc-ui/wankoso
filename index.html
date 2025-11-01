@@ -7,190 +7,223 @@
   <meta name="description" content="シニア犬・小型犬のためのやさしい腎臓ケア発酵飲料『わん酵素』。チキン風味で食いつき抜群、国産・無添加。10mL×5包のトライアルセット（メール便対応）。" />
   <meta name="format-detection" content="telephone=no" />
   <style>
-    
-    :root{
-      --brand-acc:#8ccd9c;/*深めの安心グリーン*/
-      --brand:#db884c;/*アクセント*/
-      --ink:#1b1b1b;
-      --muted:#6b7280;
-      --bg:#ffe7af;
-      --bg-alt:#f8fafc;
-      --radius:16px;
-      --shadow:0 10px 30px rgba(0,0,0,.08);
-    }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", Meiryo, Arial, sans-serif;color:var(--ink);background:var(--bg);}
-    a{color:var(--brand);text-decoration:none}
-    img{max-width:100%;display:block;height:auto}
-    .container{width:min(1100px, 92vw);margin-inline:auto}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:14px 22px;border-radius:999px;background:var(--brand);color:#fff;font-weight:700;box-shadow:var(--shadow);transition:.2s;border:2px solid var(--brand)}
-    .btn:hover{transform:translateY(-1px);filter:brightness(1.05)}
-    .btn--ghost{background:#fff;color:var(--brand)}
-    .tag{display:inline-block;padding:6px 12px;border-radius:999px;background:#e7f3ec;color:#21543a;font-weight:700;font-size:.85rem}
-    .pill{display:inline-flex;align-items:center;gap:.5rem;padding:6px 10px;border-radius:999px;background:#111827;color:#fff;font-size:.75rem}
-    .hero{position:relative;isolation:isolate;padding:0;margin:0;width:100%;min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#edf7f1;}
-    .hero-grid{position:relative;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px 20px;}
-    .hero h1{font-size:clamp(32px,4vw,50px);line-height:1.22;margin:12px 0;font-weight:800;text-shadow:0 2px 6px rgba(0,0,0,.25);color: #fff;}
-    .hero p.lead{font-size:clamp(18px,2.4vw,22px);color:#fff;font-weight:700;line-height:1.55;text-shadow:0 2px 4px rgba(0,0,0,.25);}
-    .hero-card{background:#fff;border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
-    header.nav{position:sticky;top:0;background:#9b4a28;border-bottom:1px solid #eef2f7;z-index:20;color: #fff;}
-    header .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;height:60px}
-    header .links{display:flex;gap:18px;flex-wrap:wrap}
-    header .links a{color:#fff;font-weight:600}
-    .section{padding:56px 0}
-    .section h2{font-size:clamp(24px,2.8vw,32px);margin:0 0 16px;font-weight:800;line-height:1.3;color:#9b5353;}
-    .section p{color:#111827d9;font-size:1.05rem;line-height:1.7;color:#111827cc}
-    .features{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-    .card{background:#fff;border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
-    .card h3{margin:8px 0;font-size:1.15rem;font-weight:800;color:#2c3e50;}
-    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}
-    .list{margin:8px 0 0;padding-left:1.1em}
-    .list li{margin:6px 0}
-    .badges{display:flex;gap:8px;flex-wrap:wrap}
-    .faq details{background:#fff;border-radius:12px;padding:16px 18px;margin:12px 0;box-shadow:var(--shadow)}
-    .faq summary{cursor:pointer;font-weight:700}
-    .footer{background:var(--bg-alt);padding:40px 0;margin-top:40px;border-top:1px solid #9b4a28;color: #fff;}
-    .sticky-cta{position:sticky;bottom:12px;z-index:30}
-    .sticky-cta .bar{display:flex;gap:12px;align-items:center;justify-content:center;background:#fff;border:1px solid #e5e7eb;padding:10px;border-radius:999px;box-shadow:var(--shadow)}
-    .price{font-weight:800;font-size:1.25rem}
-    /* Responsive */
-    @media (max-width: 960px){
-      .hero-grid{grid-template-columns:1fr;gap:20px}
-      .features{grid-template-columns:repeat(2,1fr)}
-      .grid-2{grid-template-columns:1fr}
-    }
-    @media (max-width: 560px){
-      .features{grid-template-columns:1fr}
-      header .links{display:none}
-      .hero-card{padding:14px}
-    }
-    /* コンテナ：スマホの余白＆アンカー位置補正 */
+/* ========== Variables ========== */
+:root{
+  --brand-acc:#8ccd9c;   /* 深めの安心グリーン */
+  --brand:#db884c;       /* アクセント */
+  --ink:#1b1b1b;
+  --muted:#6b7280;
+  --bg:#ffe7af;
+  --bg-alt:#f8fafc;
+  --radius:16px;
+  --shadow:0 10px 30px rgba(0,0,0,.08);
+  --sticky-height:80px;  /* スティッキーバー実寸に合わせて調整 */
+  --sp-pad:18px;         /* スマホ左右の余白 */
+  --sp-gap:14px;         /* スマホの隙間 */
+  --sp-radius:14px;      /* スマホ角丸 */
+}
+
+/* ========== Reset & Base ========== */
+*{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+body{
+  margin:0;
+  font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", Meiryo, Arial, sans-serif;
+  color:var(--ink);
+  background:var(--bg);
+  line-height:1.75;
+  padding-bottom: calc(var(--sticky-height) + 16px);
+}
+a{ color:var(--brand); text-decoration:none; }
+img{ max-width:100%; display:block; height:auto; }
+
+/* ========== Layout ========== */
 .container{
   width:min(1100px,94vw);
   margin-inline:auto;
   padding-inline:0.5rem;
-  scroll-margin-top:68px;
+  scroll-margin-top:68px; /* アンカー時の余白 */
+}
+.grid-2{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:22px;
+  align-items:start;
+}
+@media (min-width:960px){
+  .grid-2{
+    grid-template-columns:1fr 1fr;
+    gap:32px;
+    align-items:center;
+  }
+}
+/* Approach専用：モバイルでも2列 → 後で560px以下は1列に戻す */
+.grid-2--mobile-2col{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+  align-items:center;
+}
+.grid-2--mobile-2col .card img{ width:100%; height:auto; }
+
+/* ========== Components ========== */
+.btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:.5rem;
+  padding:14px 22px; border-radius:999px;
+  background:var(--brand); color:#fff; font-weight:700;
+  box-shadow:var(--shadow); transition:.2s; border:2px solid var(--brand);
+}
+.btn:hover{ transform:translateY(-1px); filter:brightness(1.05); }
+.btn--ghost{ background:#fff; color:var(--brand); }
+
+.pill{
+  display:inline-flex; align-items:center; gap:.5rem; padding:6px 10px;
+  border-radius:999px; background:#111827; color:#fff; font-size:.75rem;
 }
 
-/* ヘッダー：高さ短め＆少しだけブラー */
-header.nav{
-  position:sticky; top:0; z-index:20;
-  background:#9b4a28; color:#fff; height:56px;
-  border-bottom:1px solid #eef2f7;
-  backdrop-filter:saturate(1.2) blur(4px);
+/* ---- Simple Auto-height FV ---- */
+.fv{
+  width:100%;
+  max-width:100%;
+  position:relative;
+  color:#fff;
+  text-align:center;
+  overflow:hidden;
+  isolation:isolate;
 }
-header .nav-inner{
-  display:flex; align-items:center; justify-content:space-between;
-  gap:12px; height:56px; padding-block:6px;
+.fv__bg img{
+  width:100%;
+  height:auto;          /* 高さは画像比率に従う */
+  display:block;
+  object-fit:cover;
+  object-position:center;
 }
-
-/* FV：全面・中央寄せ・暗幕 */
-.hero{
-  position:relative; isolation:isolate; padding:0; margin:0; width:100%;
-  min-height:100vh; display:flex; align-items:center; justify-content:center;
-  overflow:hidden; background:#000;
+.fv__inner{
+  position:absolute;
+  inset:0;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  padding:clamp(16px,4vw,32px);
+  z-index:10;
 }
-.hero-grid{
-  position:relative; width:100%; height:100%;
-  display:flex; flex-direction:column; align-items:center; justify-content:center;
-  text-align:center; padding:56px 16px 24px;
-}
-.hero h1{
-  font-size:clamp(28px,7vw,40px);
-  line-height:1.25; margin:8px 0 6px; font-weight:800; color:#fff;
+.fv h1{
+  font-size:clamp(24px,6vw,38px);
+  font-weight:800;
+  margin:0 0 .4em;
   text-shadow:0 2px 8px rgba(0,0,0,.35);
 }
-.hero p.lead{
-  font-size:clamp(16px,4.2vw,20px);
-  color:#fff; font-weight:700; line-height:1.65; margin-bottom:14px;
+.fv .lead{
+  font-size:clamp(15px,4vw,18px);
+  font-weight:700;
+  margin:0;
   text-shadow:0 2px 6px rgba(0,0,0,.35);
 }
 
-/* カードグリッド：モバイル1 → タブ2 → PC4 */
-.features{ display:grid; grid-template-columns:1fr; gap:14px; }
-@media (min-width:768px){ .features{ grid-template-columns:repeat(2,1fr); } }
-@media (min-width:1024px){ .features{ grid-template-columns:repeat(4,1fr); } }
+/* Cards */
+.card{ background:#fff; border-radius:var(--radius); padding:18px; box-shadow:var(--shadow); }
+.card h3{ margin:8px 0; font-size:1.15rem; font-weight:800; color:#2c3e50; }
 
-/* 2カラムの段組み：モバイル1 → PC2 */
-.grid-2{ display:grid; grid-template-columns:1fr; gap:22px; align-items:start; }
-@media (min-width:960px){ .grid-2{ grid-template-columns:1fr 1fr; gap:32px; align-items:center; } }
-
-/* フッター上の固定CTA：親指タップしやすく */
+/* Sticky CTA（画面下固定） */
 .sticky-cta{
   position:fixed; left:50%; transform:translateX(-50%); bottom:8px; z-index:30;
   width:min(1100px,94vw); padding-bottom:env(safe-area-inset-bottom);
 }
 .sticky-cta .bar{
-  display:flex; gap:12px; align-items:center; justify-content:center;
+  display:flex; gap:50px; align-items:center; justify-content:center;
   background:#fff; border:1px solid #e5e7eb; padding:12px 14px;
   border-radius:16px; box-shadow:var(--shadow);
+  white-space:nowrap;
+  transform-origin:left center;
+  max-width:100%;
+  overflow:hidden;
+  gap:clamp(8px, 3vw, 18px);
 }
+.sticky-cta .bar > *{ min-width:0; }
+.sticky-cta .bar span,
+.sticky-cta .bar .price{
+  flex:1 1 auto;
+  overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
+}
+.sticky-cta .bar .btn{ flex:0 0 auto; }
 
-/* スマホのタップ最適化：ボタンを全幅に */
-@media (max-width:560px){
-  header .links{ display:none; }
-  .btn--block{ width:100%; }
-  .btn{ min-height:48px; font-size:1rem; }
+/* ========== Sections ========== */
+.section{ padding:56px 0; }
+.section h2{
+  font-size:clamp(24px,2.8vw,32px);
+  margin:0 0 16px; font-weight:800; line-height:1.3; color:#9b5353;
 }
-/* スマホでも横並びにする（Approach セクション専用） */
-.grid-2--mobile-2col{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap:14px;
-  align-items:center;
+.section p{ color:#111827cc; font-size:1.05rem; line-height:1.7; }
+
+/* Features Grid：モバイル1 → タブ2 → PC4 */
+.features{ display:grid; grid-template-columns:1fr; gap:14px; }
+@media (min-width:768px){ .features{ grid-template-columns:repeat(2,1fr); } }
+@media (min-width:1024px){ .features{ grid-template-columns:repeat(4,1fr); } }
+
+/* List */
+.list{ margin:8px 0 0; padding-left:1.1em; }
+.list li{ margin:6px 0; line-height:1.8; }
+
+/* FAQ */
+.faq details{
+  background:#fff; border-radius:12px; padding:16px 18px; margin:12px 0; box-shadow:var(--shadow);
+}
+.faq summary{ cursor:pointer; font-weight:700; }
+
+/* Footer */
+.footer{ background:var(--bg-alt); padding:40px 0; color:#111; }
+.price{ font-weight:800; font-size:1.25rem; }
+
+/* ========== Responsive ========== */
+@media (max-width:560px){
+  .container{ padding-inline: var(--sp-pad); }
+  .section{ padding:38px 0; }
+  .section h2{ font-size:clamp(20px,6vw,26px); }
+  .card{ padding:16px; border-radius: var(--sp-radius); }
+
+  /* ボタン：全幅 & タップしやすく */
+  .btn{ min-height:52px; font-size:0.95rem; padding:12px 18px; }
+
+  /* 画像はカード内100%（FVは除外） */
+  .card img{ width:100% !important; height:auto !important; }
+
+  /* Approachは1カラムに戻す */
+  .grid-2--mobile-2col{ grid-template-columns:1fr; gap:var(--sp-gap); }
+
+  /* FVや見出しの縮小 */
+  html{ font-size:93.75%; }
+  .fv h1{ font-size:clamp(20px,5.6vw,30px); }
+  .fv .lead{ font-size:clamp(14px,3.6vw,16px); }
+
+  /* スティッキーCTA微調整 */
+  .sticky-cta .bar{ font-size:0.95rem; }
+  body{ padding-bottom: calc(var(--sticky-height) + 22px); }
+}
+@media (max-width:380px){
+  .sticky-cta .bar{ transform: scale(0.88); }
+}
+@media (max-width:330px){
+  .sticky-cta .bar{ transform: scale(0.78); }
 }
 @media (max-width:360px){
-  .grid-2--mobile-2col{
-    grid-template-columns:1fr 1fr;
-    gap:10px;
-  }
+  .sticky-cta .bar{ padding-inline:10px; }
 }
-.grid-2--mobile-2col .card img{
-  width:100%;
-  height:auto;
-}
-
   </style>
 </head>
 <body>
-  <header class="nav">
-    <div class="container nav-inner">
-      <a href="#top" aria-label="わん酵素 ホーム" class="brand" style="display:flex;align-items:center;gap:10px">
-        <img src="img/logo.jpg" alt="ブランドロゴ" width="28" height="28" />
-        <strong>わん酵素</strong>
-      </a>
-      <nav class="links" aria-label="主要リンク">
-        <a href="#about">特徴</a>
-        <a href="#ingredients">配合</a>
-        <a href="#story">開発ストーリー</a>
-        <a href="#voices">使用者の声</a>
-        <a href="#faq">FAQ</a>
-      </nav>
-      <a href="#purchase" class="btn" aria-label="今すぐ購入">600円で試す</a>
-    </div>
-  </header>
-
   <main id="top">
-    <!-- Hero -->
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="container hero-grid">
-        <div>
-          <h1 id="hero-title">発酵のプロが作る<br>腎臓に特化した発酵食品</h1>
-          <p class="lead">大切なあなたのワンちゃんに</p>
-          <a href="#purchase" class="btn" aria-label="10mL×5包セットを購入する">10mL×5包セットを購入する</a>
-        </div>
-        <div>
-            <div class="hero-bg" style="position:absolute;inset:0;z-index:-1;">
-            <img src="img/test.jpg"
-                alt="愛犬とわん酵素の商品写真"
-                style="width:100%;height:100%;object-fit:cover;"
-                loading="eager" />
-            <div style="position:absolute;inset:0;
-                        background:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,.35));">
-            </div>
-            </div>
-        </div>
+    <!-- Simple FV -->
+    <section class="fv" aria-labelledby="hero-title">
+      <div class="fv__bg">
+        <img src="img/hero.jpg" alt="愛犬と『わん酵素』のイメージ">
+      </div>
+      <div class="fv__inner">
+        <h1 id="hero-title">発酵のプロが作る<br>腎臓にやさしい発酵食品</h1>
+        <p class="lead">大切なあなたのワンちゃんに</p>
+        <p style="margin-top:14px">
+          <a href="#purchase" class="btn">ご購入はこちら</a>
+        </p>
       </div>
     </section>
 
@@ -222,8 +255,8 @@ header .nav-inner{
             <li>小型犬でも飲みやすい吸収設計</li>
           </ul>
         </div>
-        <div class="card">
-          <img src="img/hakko.png" alt="腸と腎臓の関係イラスト"width="50%" height="50%" loading="lazy" />
+        <div>
+          <img src="img/hakko.png" alt="腸と腎臓の関係イラスト" loading="lazy" />
         </div>
       </div>
     </section>
@@ -245,9 +278,8 @@ header .nav-inner{
             <h3>食いつきアップ</h3>
             <p>鶏肉粉末（チキン風味）</p>
           </div>
-          <div class="card">
+          <div>
             <img src="img/test.jpg" alt="配合素材のイメージ" loading="lazy">
-            <p style="color:var(--muted);margin-top:8px">※配合はイメージです。詳細は商品表示をご確認ください。</p>
           </div>
         </div>
       </div>
@@ -275,10 +307,10 @@ header .nav-inner{
     <section class="section" id="story" aria-labelledby="story-title">
       <div class="container grid-2">
         <div>
-          <h2 id="story-title">大切な家族を救いたい。その一心で誕生。</h2>
+          <h2 id="story-title">大切な家族を救いたい。<br>その一心で誕生。</h2>
           <p>わん酵素は、生まれつき病気を抱えた一匹のワンちゃんが“主人公”。薬やサプリに頼っても体調が安定しない日々。「少しでも楽にしてあげたい」という家族の想いから、発酵の専門家と共にレシピ開発が始まりました。素材、発酵期間、風味、安全性を繰り返し検証し、完成までに3年。飲み続けた結果、ワンちゃんは以前のように元気を取り戻し、薬に頼らず過ごせるほどに回復。この経験をもとに、腎臓で悩むワンちゃんの力になりたいという願いから商品化されました。</p>
         </div>
-        <div class="card">
+        <div>
           <img src="img/test.jpg" alt="家族と犬の温かな写真" loading="lazy">
         </div>
       </div>
@@ -308,13 +340,13 @@ header .nav-inner{
     <!-- Product / How to -->
     <section class="section" id="purchase" aria-labelledby="purchase-title">
       <div class="container grid-2">
-        <div class="card">
+        <div>
           <img src="img/test.jpg" alt="わん酵素商品写真" loading="lazy">
         </div>
         <div>
           <h2 id="purchase-title">商品情報・ご購入</h2>
           <p class="price">600円（税別）／10mL×5包セット</p>
-          <p class="muted">配送：メール便対応・初回限定ではありません</p>
+          <p class="muted">配送：メール便対応</p>
           <div class="badges" style="margin:12px 0 20px">
             <span class="pill">国産</span>
             <span class="pill">無添加</span>
@@ -333,9 +365,9 @@ header .nav-inner{
       </div>
       <div class="container sticky-cta" aria-hidden="false" style="margin-top:18px">
         <div class="bar">
-          <span>10mL×5包セット</span>
-          <strong class="price">600円（税別）</strong>
-          <a href="https://corohirotiro.base.shop/items/123829741" class="btn" aria-label="今すぐ試す">今すぐ試す</a>
+          <span>わん酵素（5包セット）</span>
+          <strong class="price">600円<div style="font-size: x-small;">（税別）</div></strong>
+          <a href="https://corohirotiro.base.shop/items/123829741" class="btn" aria-label="購入">購入する</a>
         </div>
       </div>
     </section>
@@ -383,19 +415,21 @@ header .nav-inner{
         </details>
       </div>
     </section>
-
   </main>
 
   <footer class="footer" role="contentinfo">
     <div class="container" style="display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between">
-      <p style="margin:0;color:var(--muted)">© <span id="y"></span> わん酵素</p>
+      <ul class="footer-links">
+        <li><a href="https://corohirotiro.base.shop/privacy">プライバシーポリシー</a></li>
+        <li><a href="https://corohirotiro.base.shop/law">特定商取引法に基づく表記</a></li>
+      </ul>
       <nav style="display:flex;gap:14px">
         <span style="color:var(--muted)">販売者：コロヒロチロ</span>
       </nav>
     </div>
   </footer>
 
-  <!-- JSON-LD Product Schema (任意) -->
+  <!-- JSON-LD Product Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -412,6 +446,5 @@ header .nav-inner{
     }
   }
   </script>
-  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
 </body>
 </html>
