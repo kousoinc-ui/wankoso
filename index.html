@@ -123,7 +123,7 @@ img{ max-width:100%; display:block; height:auto; }
 
 /* Cards */
 .card{ background:#fff; border-radius:var(--radius); padding:18px; box-shadow:var(--shadow); }
-.card h3{ margin:8px 0; font-size:1.15rem; font-weight:800; color:#2c3e50; }
+.card h3{ margin:8px 0; font-size:1.3rem; font-weight:800; color:#db884c;text-align: center; }
 
 /* Sticky CTA（画面下固定） */
 .sticky-cta{
@@ -178,7 +178,7 @@ img{ max-width:100%; display:block; height:auto; }
 /* ========== Responsive ========== */
 @media (max-width:560px){
   .container{ padding-inline: var(--sp-pad); }
-  .section{ padding:38px 0; }
+  .section{ padding:20px 0; }
   .section h2{ font-size:clamp(20px,6vw,26px); }
   .card{ padding:16px; border-radius: var(--sp-radius); }
 
@@ -230,15 +230,15 @@ img{ max-width:100%; display:block; height:auto; }
     <!-- Symptoms / Why -->
     <section class="section" id="about" aria-labelledby="why-title">
       <div class="container">
-        <h2 id="why-title">なんとなく元気がない。それが一番不安。</h2>
-        <p>シニア期に入ると、多くのワンちゃんに次のような変化が現れます。</p>
+        <h2 id="why-title">なんとなく元気がない。<br>それが一番不安。</h2>
+        <p>ごはんの前のワクワク、散歩の足取り、水を飲む音、トイレのタイミング。<br>毎日のルーティンに少しでも違いを感じたら、それは体調のメッセージかもしれません。まずはよくある変化から一緒に見ていきましょう。</p>
         <div class="features" style="margin-top:14px">
-          <div class="card"><h3>以前より歩きたがらない</h3><p class="muted">散歩の距離が短くなる、動きがゆっくりになる。</p></div>
-          <div class="card"><h3>寝ている時間が増えた</h3><p class="muted">活動量の低下が続く。</p></div>
-          <div class="card"><h3>食欲にムラがある</h3><p class="muted">フードを残す、味の好みが変わる。</p></div>
-          <div class="card"><h3>水を飲む量が変わった</h3><p class="muted">多飲・少飲などの変化が見られる。</p></div>
+          <div class="card"><h3 style="text-align: center;">老廃物や毒素が体にたまる</h3><p class="muted">腎臓は「血液をきれいにして、不要なものをおしっこにする」臓器です。働きが落ちると、尿がうまく作れず、老廃物が残ってしまうようになります。</p></div>
+          <div class="card"><h3>水分バランスが崩れる</h3><p class="muted">腎臓は、体の中の水分や塩分の量を調整する役目もあります。そのため腎臓が弱ると、<br>・たくさん水を飲む(多飲)<br>・おしっこの量が増える(多尿)<br>・逆に、おしっこが出にくくなる(尿量減少)<br>といった変化が出ます。</p></div>
+          <div class="card"><h3>貧血やむくみ</h3><p class="muted">腎臓は、血液をつくるホルモン<strong>(エリスロポエチン)</strong>を出しています。機能が低下すると、そのホルモンが減り、貧血になってしまうことがあります。また、体に水分がたまり、足や顔のむくみが出ることもあります。</p></div>
+          <div class="card"><h3>食欲や元気の低下</h3><p class="muted">老廃物がたまることで、体が「だるい」「気持ち悪い」と感じるようになり、ごはんを食べなくなったり、元気がなくなります。口臭が強くなる(アンモニア臭)ことも特徴的です。</p></div>
         </div>
-        <p style="margin-top:8px">年齢のせいだと思いがちですが、これらは腎臓の負担が関係していることがあります。小型犬は特に腎臓が弱りやすく、早い段階からのケアが大切です。</p>
+        <p style="margin-top:8px">年齢のせいに思えますが、こうした変化は体のバランスの乱れが関係していることもあります。とくに小型犬は腎臓に負担がかかりやすいと言われています。だからこそ、早めに“体の中から整えるケア”を始めてあげることが大切です。次のパートでは、その第一歩をご紹介します。</p>
       </div>
     </section>
 
@@ -246,12 +246,13 @@ img{ max-width:100%; display:block; height:auto; }
     <section class="section" aria-labelledby="approach-title" style="background:var(--bg-alt)">
       <div class="container grid-2 grid-2--mobile-2col">
         <div>
-          <h2 id="approach-title">腎臓ケアは「腸から整える」時代へ。</h2>
-          <p>腎臓は体内の老廃物を処理する重要な臓器。腸内環境が乱れると有害物質が増え、腎臓に余計な負担がかかります。わん酵素は、発酵の力で腸から整え、腎臓への負担軽減をサポートします。</p>
+          <h2 id="approach-title">腎臓ケアは<br>「腸から整える」時代へ。</h2>
+          <p>腎臓は、体の老廃物を処理する大切な臓器。  腸内環境が乱れると不要なものが増え、腎臓に負担がかかりやすくなると言われています。</p>
+          <p>わん酵素は、発酵の力で“腸のめぐり”をサポートし、体のバランス維持を後押しします。  無理なく続けられるやさしい設計です。</p>
           <ul class="list">
             <li>乳酸菌、オリゴ糖、有機酸が腸内環境をサポート</li>
-            <li>利尿作用を助け、老廃物の排出を促す</li>
-            <li>抗酸化成分が腎細胞を守る</li>
+            <li>水分バランスの維持をサポート、老廃物の排出を促す</li>
+            <li>抗酸化成分が元気な毎日を応援</li>
             <li>小型犬でも飲みやすい吸収設計</li>
           </ul>
         </div>
@@ -263,27 +264,55 @@ img{ max-width:100%; display:block; height:auto; }
 
     <!-- Ingredients -->
     <section class="section" id="ingredients" aria-labelledby="ingredients-title">
-      <div class="container">
-        <h2 id="ingredients-title">腎臓を考えた専用配合</h2>
-        <div class="grid-2">
-          <div class="card">
-            <h3>利尿を助ける</h3>
-            <p>とうもろこしひげ、たんぽぽ</p>
-            <h3>抗酸化で負担軽減</h3>
-            <p>枸杞（クコ）、りんご、みかん</p>
-            <h3>泌尿器の炎症ケア</h3>
-            <p>撫子、甘草、オオバコ</p>
-            <h3>腸内環境を整える</h3>
-            <p>オリゴ糖、乳酸菌</p>
-            <h3>食いつきアップ</h3>
-            <p>鶏肉粉末（チキン風味）</p>
-          </div>
-          <div>
-            <img src="img/test.jpg" alt="配合素材のイメージ" loading="lazy">
-          </div>
-        </div>
+  <div class="container">
+    
+    
+    <h2 id="ingredients-title" style="text-align:center;">
+      腎臓ケアのための<br>やさしい素材バランス
+    </h2>
+    <p style="max-width:580px; margin:12px auto 40px;">
+      体のめぐり・バランスをやさしく支えるために、厳選した素材を組み合わせています。
+      どれも無理なく毎日続けられるよう、シンプルで小型犬向けのやさしい処方です。
+    </p>
+
+    <div class="features" style="margin-top:12px;">
+
+      <div class="card" style="text-align:center;">
+        <img src="img/sozai_1.webp" alt="" width="80" height="80" style="margin:auto;">
+        <h3>めぐりをサポート</h3>
+        <p class="muted">とうもろこしひげ / たんぽぽ</p>
       </div>
-    </section>
+
+      <div class="card" style="text-align:center;">
+        <img src="img/sozai_2.jpg" alt="" width="80" height="80" style="margin:auto;">
+        <h3>日々の元気を守る</h3>
+        <p class="muted">クコ / りんご / みかん</p>
+      </div>
+
+      <div class="card" style="text-align:center;">
+        <img src="img/sozai_3.webp" alt="" width="80" height="80" style="margin:auto;">
+        <h3>スッキリ習慣を応援</h3>
+        <p class="muted">撫子 / 甘草 / オオバコ</p>
+      </div>
+
+      <div class="card" style="text-align:center;">
+        <img src="img/sozai_4.webp" alt="" width="80" height="80" style="margin:auto;">
+        <h3>腸内サポート</h3>
+        <p class="muted">オリゴ糖 / 乳酸菌</p>
+      </div>
+
+      <!--<div class="card" style="text-align:center;">
+        <img src="img/sozai_5.webp" alt="" width="80" height="80" style="margin:auto;">
+        <h3>おいしく続く</h3>
+        <p class="muted">鶏肉粉末</p>
+      </div>-->
+
+    </div>
+
+
+  </div>
+</section>
+
 
     <!-- Fermentation & Palatability -->
     <section class="section" aria-labelledby="ferment-title" style="background:var(--bg-alt)">
@@ -311,7 +340,7 @@ img{ max-width:100%; display:block; height:auto; }
           <p>わん酵素は、生まれつき病気を抱えた一匹のワンちゃんが“主人公”。薬やサプリに頼っても体調が安定しない日々。「少しでも楽にしてあげたい」という家族の想いから、発酵の専門家と共にレシピ開発が始まりました。素材、発酵期間、風味、安全性を繰り返し検証し、完成までに3年。飲み続けた結果、ワンちゃんは以前のように元気を取り戻し、薬に頼らず過ごせるほどに回復。この経験をもとに、腎臓で悩むワンちゃんの力になりたいという願いから商品化されました。</p>
         </div>
         <div>
-          <img src="img/test.jpg" alt="家族と犬の温かな写真" loading="lazy">
+          <img src="img/cht1.jpg" alt="家族と犬の温かな写真" loading="lazy">
         </div>
       </div>
     </section>
@@ -341,31 +370,34 @@ img{ max-width:100%; display:block; height:auto; }
     <section class="section" id="purchase" aria-labelledby="purchase-title">
       <div class="container grid-2">
         <div>
-          <img src="img/test.jpg" alt="わん酵素商品写真" loading="lazy">
+          <img src="img/item.jpg" alt="わん酵素商品写真" loading="lazy">
         </div>
         <div>
-          <h2 id="purchase-title">商品情報・ご購入</h2>
-          <p class="price">600円（税別）／10mL×5包セット</p>
-          <p class="muted">配送：メール便対応</p>
+          <h2 id="purchase-title">商品情報</h2>
           <div class="badges" style="margin:12px 0 20px">
-            <span class="pill">国産</span>
+            <span class="pill">厳選素材</span>
             <span class="pill">無添加</span>
             <span class="pill">チキン風味</span>
           </div>
-
-          <p style="margin:6px 0;color:var(--muted)"><strong>販売者：</strong>コロヒロチロ</p>
+          <p class="price">600円（税別）／10mL×5包セット</p>
           <a href="https://corohirotiro.base.shop/items/123829741" class="btn" aria-label="カートに入れる">カートに入れる</a>
-          <a href="#faq" class="btn btn--ghost" style="margin-left:8px" aria-label="FAQを読む">FAQを読む</a>
+          <p class="price">1650円（税別）／10mL×15包セット</p>
+          <a href="https://corohirotiro.base.shop/items/123829808" class="btn" aria-label="カートに入れる">カートに入れる</a>
+          <p class="price">3000円（税別）／10mL×30包セット</p>
+          <a href="https://corohirotiro.base.shop/items/123829824" class="btn" aria-label="カートに入れる">カートに入れる</a>
+         <!-- <a href="#faq" class="btn btn--ghost" style="margin-left:8px" aria-label="FAQを読む">FAQを読む</a>-->
           <div style="margin-top:22px">
+            <h3>配送</h3>
+            <p>メール便でお送りします。</p>
             <h3>与え方</h3>
             <p>そのまま、または水・フードに混ぜて与えてください。<br>
-              小型犬（2〜5kg）：1包/日。シニア犬は体調に合わせて調整してください。</p>
+              小型犬（2〜5kg）：1包/日。</p>
           </div>
         </div>
       </div>
       <div class="container sticky-cta" aria-hidden="false" style="margin-top:18px">
         <div class="bar">
-          <span>わん酵素（5包セット）</span>
+          <span>わん酵素</span>
           <!--<strong class="price">600円<div style="font-size: x-small;">（税別）</div></strong>-->
           <a href="https://corohirotiro.base.shop/items/123829741" class="btn" aria-label="購入">購入する</a>
         </div>
@@ -395,7 +427,7 @@ img{ max-width:100%; display:block; height:auto; }
         </details>
         <details>
           <summary>薬やサプリと併用できますか？</summary>
-          <p>基本的に問題ありませんが、併用中の製品により異なるため心配があればかかりつけ医へ。</p>
+          <p>基本的に問題ありませんが、併用中の製品により異なるため心配があればかかりつけの獣医師へ。</p>
         </details>
         <details>
           <summary>どれくらい続ければ良いですか？</summary>
@@ -429,22 +461,41 @@ img{ max-width:100%; display:block; height:auto; }
     </div>
   </footer>
 
-  <!-- JSON-LD Product Schema -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "name": "わん酵素",
-    "description": "シニア犬・小型犬のためのやさしい腎臓ケア発酵飲料。チキン風味、国産・無添加。10mL×5包のトライアルセット。",
-    "brand": {"@type":"Brand","name":"わん酵素"},
-    "image": ["https://example.com/assets/product.jpg"],
-    "offers": {
-      "@type": "Offer",
-      "priceCurrency": "JPY",
-      "price": "600",
-      "availability": "https://schema.org/InStock"
-    }
-  }
-  </script>
+{
+ "@context":"https://schema.org",
+ "@type":"Product",
+ "name":"わん酵素",
+ "description":"シニア犬・小型犬のための腎臓ケア発酵飲料。チキン風味、国産・無添加。",
+ "brand":{"@type":"Brand","name":"わん酵素"},
+ "image":["https://example.com/assets/product.jpg"],
+ "offers":{
+   "@type":"AggregateOffer",
+   "priceCurrency":"JPY",
+   "lowPrice":"600",
+   "highPrice":"3000",
+   "offerCount":"3",
+   "offers":[
+     {"@type":"Offer","price":"600","url":"https://.../item-5","availability":"https://schema.org/InStock","itemCondition":"https://schema.org/NewCondition"},
+     {"@type":"Offer","price":"1650","url":"https://.../item-15","availability":"https://schema.org/InStock","itemCondition":"https://schema.org/NewCondition"},
+     {"@type":"Offer","price":"3000","url":"https://.../item-30","availability":"https://schema.org/InStock","itemCondition":"https://schema.org/NewCondition"}
+   ]
+ }
+}
+</script>
+
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"FAQPage",
+ "mainEntity":[
+  {"@type":"Question","name":"腎臓病のワンちゃんにも与えられますか？",
+   "acceptedAnswer":{"@type":"Answer","text":"食品レベルの発酵飲料です。治療中・食事療法中は獣医師にご相談ください。"}},
+  {"@type":"Question","name":"どれくらい続ければ良いですか？",
+   "acceptedAnswer":{"@type":"Answer","text":"まずは5包で体調変化を確認し、継続で実感しやすくなります。"}}
+ ]
+}
+</script>
+
 </body>
 </html>
