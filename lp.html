@@ -12,11 +12,12 @@
 body{
   margin: 0;
   background:#ffebce;
+  font-family: "Hiragino Sans", "游ゴシック体", sans-serif;
 }
 
 /* ----- 画像縦並び（隙間ゼロ） ----- */
 .lp-vertical-images {
-  max-width: 900px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 0;
 }
@@ -29,24 +30,30 @@ body{
   border: 0;
 }
  
-/* ----- CVボタン（シンプル版） ----- */
+/* ----- CVボタン（スマホ優先・目立つ形） ----- */
 .cv-btn {
   display: block;
-  max-width: 860px;
-  width: 50%;
+  max-width: 420px;
+  width: 70%;
   margin: 24px auto;
   padding: 18px 28px;
   background: #db884c;
   color: #fff;
-  border-radius: 8px;
-  font-size: 20px;
+  border-radius: 999px;
+  font-size: 18px;
   font-weight: bold;
   text-align: center;
   text-decoration: none;
+  box-shadow: 0 4px 0 #b36b35;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
 }
-.cv-btn:hover { opacity: 0.85; }
+.cv-btn:hover {
+  opacity: 0.9;
+  transform: translateY(1px);
+  box-shadow: 0 2px 0 #b36b35;
+}
  
-/* ----- 商品情報ブロック（背景なし） ----- */
+/* ----- 商品情報ブロック ----- */
 .section {
   padding: 40px 0;
   background: transparent;
@@ -58,28 +65,67 @@ body{
   padding: 0 16px;
 }
 
+.section .container {
+  background: #fffdfa;
+  border-radius: 16px;
+  padding: 24px 18px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* 見出し */
+.section h2,
+.section h3 {
+  margin-top: 0;
+  color: #5b4636;
+  font-weight: 700;
+}
+.section h2 {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+}
+.section h3 {
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+}
+
 /* 商品情報・ボタン */
 .price {
   font-weight: bold;
   font-size: 1.2rem;
+  color: #5b4636;
 }
 
+/* カートボタン：スマホでは100%幅、PCでインライン */
 .btn {
-  display: inline-block;
+  display: block;
+  width: 70%;
+  max-width: 260px;
   padding: 14px 20px;
-  margin: 6px 0 20px;
+  margin: 10px 0 16px;
   background: #db884c;
   color: #fff;
   font-weight: bold;
-  border-radius: 8px;
+  border-radius: 999px;
   text-align: center;
   text-decoration: none;
+  box-shadow: 0 3px 0 #b36b35;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
 }
-.btn:hover { opacity: 0.85; }
+.btn:hover {
+  opacity: 0.9;
+  transform: translateY(1px);
+  box-shadow: 0 1px 0 #b36b35;
+}
  
 /* ----- 注意事項 ----- */
-.list { padding-left: 1.2em; }
-.list li { margin-bottom: 6px; }
+.list { 
+  padding-left: 1.2em; 
+  margin: 0;
+}
+.list li { 
+  margin-bottom: 6px; 
+  color: #5b4636;
+}
 
 /* grid-2 の簡易適用（使用しているため残す） */
 .grid-2 {
@@ -87,10 +133,60 @@ body{
   grid-template-columns: 1fr;
   gap: 20px;
 }
-@media(min-width:768px){
+
+/* フッター */
+.footer {
+  background: #f4dcb5;
+  border-top: 2px solid #db884c;
+  padding: 32px 16px;
+  color: #5b4636;
+  text-align: center;
+}
+.footer-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 12px;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.footer-links a {
+  color: #5b4636;
+  text-decoration: none;
+  font-weight: 600;
+  transition: opacity 0.3s;
+}
+.footer-links a:hover {
+  opacity: 0.7;
+  text-decoration: underline;
+}
+.footer-seller {
+  margin: 8px 0 0;
+  font-size: 14px;
+}
+.footer-copy {
+  margin: 6px 0 0;
+  font-size: 13px;
+  color: #7a6a56;
+}
+
+/* レスポンシブ */
+@media (min-width:768px){
   .grid-2{
     grid-template-columns: 1fr 1fr;
     gap: 32px;
+  }
+  .container {
+    padding: 0 24px;
+  }
+  .btn {
+    display: inline-block;
+    width: auto;
   }
 }
 </style>
@@ -100,54 +196,52 @@ body{
  
 <div class="lp-vertical-images">
  
-  <img src="img/20251113LP_01.jpg">
-  <img src="img/20251113LP_03.jpg">
-  <img src="img/20251113LP_04.jpg">
-  <img src="img/20251113LP_05.jpg">
-  <img src="img/20251113LP_06.jpg">
-  <img src="img/20251113LP_07.jpg">
-  <img src="img/20251113LP_08.jpg">
-  <img src="img/20251113LP_09.jpg">
-  <img src="img/20251113LP_10.jpg">
-  <img src="img/20251113LP_11.jpg">
-  <img src="img/20251113LP_12.jpg">
-  <img src="img/20251113LP_13.jpg">
-  <img src="img/20251113LP_14.jpg">
-  <img src="img/20251113LP_15.jpg">
+  <img src="img/20251113LP_01.jpg" alt="シニア犬・小型犬のためのやさしい腎臓ケア わん酵素" loading="lazy">
+  <img src="img/20251113LP_03.jpg" alt="わん酵素の特徴紹介" loading="lazy">
+  <img src="img/20251113LP_04.jpg" alt="腎臓ケアに配慮した設計" loading="lazy">
+  <img src="img/20251113LP_05.jpg" alt="チキン風味で食いつき抜群" loading="lazy">
+  <img src="img/20251113LP_06.jpg" alt="国産・無添加のこだわり" loading="lazy">
+  <img src="img/20251113LP_07.jpg" alt="シニア犬や小型犬におすすめ" loading="lazy">
+  <img src="img/20251113LP_08.jpg" alt="わん酵素の成分説明" loading="lazy">
+  <img src="img/20251113LP_09.jpg" alt="ご愛用者さまの声" loading="lazy">
+  <img src="img/20251113LP_10.jpg" alt="犬の腎臓をやさしくケア" loading="lazy">
+  <img src="img/20251113LP_11.jpg" alt="与え方の説明" loading="lazy">
+  <img src="img/20251113LP_12.jpg" alt="使用シーンのイメージ" loading="lazy">
+  <img src="img/20251113LP_13.jpg" alt="わん酵素のQ&A" loading="lazy">
+  <img src="img/20251113LP_14.jpg" alt="安心のサポート体制" loading="lazy">
+  <img src="img/20251113LP_15.jpg" alt="わん酵素と一緒に過ごす毎日" loading="lazy">
 
   <!-- ★ 15と17の間に入る動画（縦幅ひかえめ） -->
   <video
     controls
     playsinline
     muted
-    autoplay
-    loop
-    style="width:100%; max-height:500px; object-fit:cover; display:block; margin:0; padding:0; border:0;"
+    style="width:100%; max-height:500px; max-width:900px;object-fit:cover; display:block; margin:0; padding:0; border:0;"
   >
     <source src="img/cht_eat.mp4" type="video/mp4">
     お使いのブラウザは動画再生に対応していません。
   </video>
 
-  <img src="img/20251113LP_17.jpg">
-  <img src="img/20251113LP_18.jpg">
+  <img src="img/20251113LP_17.jpg" alt="わん酵素のトライアルセット案内" loading="lazy">
+  <img src="img/20251113LP_18.jpg" alt="トライアルセットの詳細情報" loading="lazy">
  
   <!-- CVボタン（18の下） -->
   <a class="cv-btn" href="#purchase">
     購入する
   </a>
  
-  <img src="img/20251113LP_20.jpg">
-  <img src="img/20251113LP_21.jpg">
-  <img src="img/20251113LP_22.jpg">
-  <img src="img/20251113LP_23.jpg">
-  <img src="img/20251113LP_24.jpg">
+  <img src="img/20251113LP_20.jpg" alt="定期的なケアの大切さ" loading="lazy">
+  <img src="img/20251113LP_21.jpg" alt="ご利用者のビフォーアフター" loading="lazy">
+  <img src="img/20251113LP_22.jpg" alt="よくあるご質問" loading="lazy">
+  <img src="img/20251113LP_23.jpg" alt="安心して続けられる理由" loading="lazy">
+  <img src="img/20251113LP_24.jpg" alt="わん酵素のまとめ" loading="lazy">
  
   <!-- ★ 最後の商品情報セクション -->
   <section class="section" id="purchase">
     <div class="container grid-2">
 
       <div>
-        <img src="img/item.jpg" alt="わん酵素商品写真" loading="lazy">
+        <img src="img/item.jpg" alt="わん酵素商品写真 10mL×5包・15包・30包" loading="lazy">
       </div>
 
       <div>
@@ -164,8 +258,11 @@ body{
           <h3>配送</h3>
           <p>メール便でお送りします。</p>
           <h3>与え方</h3>
-          <p>そのまま、または水・フードに混ぜて与えてください。<br>
-            小型犬（2〜5kg）：1包/日。</p>
+          <p>そのまま、または水・フードに混ぜて与えてください。</p>
+          <h3>原材料</h3>
+          <p>とうもろこしひげ、撫子、たんぽぽ、オリゴ糖、サンシュユ、オオバコ、甘草、枸杞、乳酸菌、りんご、なし、みかん、鶏肉粉末</p>
+          <h3>成分</h3>
+          <p>粗蛋白：0.12％,粗脂肪：0.26％,粗繊維：0.00％,水分：56.06％,カロリー：175kcal/100g</p>
         </div>
       </div>
 
@@ -186,17 +283,35 @@ body{
   </section>
  
 </div>
- 
+
+<footer class="footer" role="contentinfo">
+  <div class="footer-inner">
+    <ul class="footer-links">
+      <li><a href="https://corohirotiro.base.shop/privacy">プライバシーポリシー</a></li>
+      <li><a href="https://corohirotiro.base.shop/law">特定商取引法に基づく表記</a></li>
+    </ul>
+    <p class="footer-seller">販売者：コロヒロチロ</p>
+    <p class="footer-copy">&copy; 2025 Corohirotiro. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script>
+  // 「購入する」クリックでスムーズスクロール
+  document.addEventListener("DOMContentLoaded", function() {
+    var cvBtn = document.querySelector(".cv-btn");
+    if (cvBtn) {
+      cvBtn.addEventListener("click", function(e) {
+        e.preventDefault();
+        var target = document.querySelector(this.getAttribute("href"));
+        if (target) {
+          window.scrollTo({
+            top: target.offsetTop - 20,
+            behavior: "smooth"
+          });
+        }
+      });
+    }
+  });
+</script>
 </body>
-  <footer class="footer" role="contentinfo">
-    <div class="container" style="display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between">
-      <ul class="footer-links">
-        <li><a href="https://corohirotiro.base.shop/privacy">プライバシーポリシー</a></li>
-        <li><a href="https://corohirotiro.base.shop/law">特定商取引法に基づく表記</a></li>
-      </ul>
-      <nav style="display:flex;gap:14px">
-        <span style="color:var(--muted)">販売者：コロヒロチロ</span>
-      </nav>
-    </div>
-  </footer>
 </html>
