@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoroHugわん｜皮膚がデリケートな子・シニア犬のためのオーガニックケアウェア</title>
+    <meta name="description" content="「お洋服を、着るケアに。」縫い目を外側に出し、タグなし設計。皮膚がデリケートな子やシニア犬のためにうまれたやさしいインナー、CoroHugわん。" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* ===== リセット・ベース ===== */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --pink: #db884c;
+            --pink-dark: #b36b35;
+            --pink-light: #ffebcd;
+            --cream: #fffdf9;
+            --warm: #f4dcb5;
+            --border: #e8d0a8;
+            --text: #5b4636;
+            --text-light: #8c7260;
+            --white: #ffffff;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            color: var(--text);
+            background: var(--cream);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        /* ===== ナビゲーションバー ===== */
+        .nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(253, 250, 247, 0.92);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid var(--border);
+            padding: 12px 20px;
+        }
+
+        .nav-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-family: 'Noto Serif JP', serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--pink-dark);
+            text-decoration: none;
+            letter-spacing: 0.05em;
+        }
+
+        .nav-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--pink);
+            color: var(--white);
+            text-decoration: none;
+            padding: 8px 18px;
+            border-radius: 999px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            transition: background 0.2s;
+        }
+
+        .nav-cta:hover {
+            background: var(--pink-dark);
+        }
+
+        /* ===== ヒーロー ===== */
+        .hero {
+            background: linear-gradient(160deg, #fce8ef 0%, #fdf6f0 60%, #fdfaf7 100%);
+            padding: 60px 20px 50px;
+            text-align: center;
+        }
+
+        .hero-eyebrow {
+            display: inline-block;
+            background: var(--pink-light);
+            color: var(--pink-dark);
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            padding: 4px 14px;
+            border-radius: 999px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-family: 'Noto Serif JP', serif;
+            font-size: clamp(1.7rem, 5vw, 2.6rem);
+            font-weight: 700;
+            line-height: 1.4;
+            color: var(--text);
+            margin-bottom: 16px;
+        }
+
+        .hero h1 em {
+            font-style: normal;
+            color: var(--pink-dark);
+        }
+
+        .hero-sub {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            max-width: 480px;
+            margin: 0 auto 32px;
+        }
+
+        .hero-img-wrap {
+            max-width: 500px;
+            margin: 0 auto 32px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 12px 40px rgba(200, 130, 155, 0.18);
+        }
+
+        .hero-img-wrap img {
+            border-radius: 20px;
+        }
+
+        .hero-caption {
+            font-size: 0.78rem;
+            color: #bbb;
+            margin-top: 8px;
+        }
+
+        .hero-price {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--pink-dark);
+            margin-bottom: 6px;
+        }
+
+        .hero-price span {
+            font-size: 0.85rem;
+            font-weight: 400;
+            color: var(--text-light);
+        }
+
+        .btn-main {
+            display: inline-block;
+            padding: 18px 40px;
+            background: var(--pink);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 999px;
+            font-size: 1rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            box-shadow: 0 5px 0 var(--pink-dark);
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+
+        .btn-main:hover {
+            transform: translateY(2px);
+            box-shadow: 0 3px 0 var(--pink-dark);
+        }
+
+        .btn-sub {
+            display: inline-block;
+            margin-top: 14px;
+            font-size: 0.82rem;
+            color: var(--text-light);
+        }
+
+        /* ===== セクション共通 ===== */
+        .section {
+            padding: 60px 20px;
+        }
+
+        .section-inner {
+            max-width: 860px;
+            margin: 0 auto;
+        }
+
+        .section-label {
+            text-align: center;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            color: var(--pink-dark);
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-family: 'Noto Serif JP', serif;
+            font-size: clamp(1.3rem, 3.5vw, 1.9rem);
+            font-weight: 700;
+            line-height: 1.5;
+            margin-bottom: 12px;
+        }
+
+        .section-desc {
+            text-align: center;
+            font-size: 0.92rem;
+            color: var(--text-light);
+            max-width: 520px;
+            margin: 0 auto 40px;
+        }
+
+        .divider {
+            width: 40px;
+            height: 3px;
+            background: var(--pink);
+            border-radius: 3px;
+            margin: 12px auto 36px;
+        }
+
+        /* ===== こんな子に ===== */
+        .for-whom {
+            background: var(--warm);
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 24px 20px;
+            text-align: center;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .card-icon {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+
+        .card h3 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+            color: var(--pink-dark);
+        }
+
+        .card p {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        /* ===== こだわりポイント ===== */
+        .points-list {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .point-item {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            background: var(--white);
+            border-radius: 16px;
+            padding: 24px 22px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+            border-left: 4px solid var(--pink);
+        }
+
+        .point-num {
+            flex-shrink: 0;
+            width: 42px;
+            height: 42px;
+            background: var(--pink-light);
+            color: var(--pink-dark);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        .point-body h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+            color: var(--text);
+        }
+
+        .point-body p {
+            font-size: 0.88rem;
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        /* ===== 商品詳細 ===== */
+        .product-detail {
+            background: var(--warm);
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .product-img-wrap {
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(200, 130, 155, 0.14);
+        }
+
+
+        .spec-block {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 18px 20px;
+            margin-bottom: 16px;
+            font-size: 0.9rem;
+        }
+
+        .spec-block h4 {
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            color: var(--pink-dark);
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .spec-block p {
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        .price-block {
+            background: var(--pink-light);
+            border-radius: 12px;
+            padding: 18px 20px;
+            margin-bottom: 20px;
+        }
+
+        .price-main {
+            font-size: 1.7rem;
+            font-weight: 700;
+            color: var(--pink-dark);
+        }
+
+        .price-sub {
+            font-size: 0.82rem;
+            color: var(--text-light);
+            margin-top: 2px;
+        }
+
+        /* ===== CTAボタン（LINE） ===== */
+        .btn-line {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            padding: 18px 24px;
+            background: #06C755;
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            box-shadow: 0 5px 0 #059444;
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+
+        .btn-line:hover {
+            transform: translateY(2px);
+            box-shadow: 0 3px 0 #059444;
+        }
+
+        .btn-line svg {
+            width: 24px;
+            height: 24px;
+            flex-shrink: 0;
+        }
+
+        .btn-note {
+            font-size: 0.78rem;
+            color: var(--text-light);
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        /* ===== サイズ表 ===== */
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+        }
+
+        th,
+        td {
+            border: 1px solid var(--border);
+            padding: 13px 16px;
+            text-align: center;
+        }
+
+        th {
+            background: var(--pink-light);
+            color: var(--pink-dark);
+            font-weight: 700;
+            font-size: 0.82rem;
+            letter-spacing: 0.06em;
+        }
+
+        tbody tr:nth-child(even) {
+            background: #fdf9fb;
+        }
+
+        .size-note {
+            font-size: 0.8rem;
+            color: var(--text-light);
+            margin-top: 12px;
+            text-align: center;
+        }
+
+        /* ===== お客様の声 ===== */
+        .voices {
+            background: var(--warm);
+        }
+
+        .voice-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+        }
+
+        .voice-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 22px 20px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+            position: relative;
+        }
+
+        .voice-card::before {
+            content: '\201C';
+            position: absolute;
+            top: 10px;
+            left: 16px;
+            font-size: 3rem;
+            color: var(--pink-light);
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+
+        .voice-text {
+            font-size: 0.88rem;
+            line-height: 1.8;
+            margin-bottom: 14px;
+            padding-top: 16px;
+            color: var(--text);
+        }
+
+        .voice-meta {
+            font-size: 0.78rem;
+            color: var(--text-light);
+            font-weight: 600;
+        }
+
+        .stars {
+            color: #f5a623;
+            font-size: 0.9rem;
+            margin-bottom: 6px;
+        }
+
+        /* ===== 最終CTA ===== */
+        .final-cta {
+            background: linear-gradient(135deg, #fce8ef 0%, #fdf6f0 100%);
+            padding: 70px 20px;
+            text-align: center;
+        }
+
+        .final-cta .section-title {
+            margin-bottom: 10px;
+        }
+
+        .final-cta .section-desc {
+            margin-bottom: 32px;
+        }
+
+        /* ===== フッター ===== */
+        .footer {
+            background: #f0e8e0;
+            border-top: 1px solid var(--border);
+            padding: 32px 20px;
+            text-align: center;
+        }
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            margin-bottom: 14px;
+        }
+
+        .footer-links a {
+            font-size: 0.82rem;
+            color: var(--text-light);
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-copy {
+            font-size: 0.78rem;
+            color: #b0a89e;
+        }
+
+        /* ===== レスポンシブ ===== */
+        @media (max-width: 640px) {
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding: 50px 16px 40px;
+            }
+
+            .section {
+                padding: 50px 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ナビゲーション -->
+    <header class="nav">
+        <div class="nav-inner">
+            <a href="#" class="nav-logo">CoroHugわん</a>
+            <a href="#cta" class="nav-cta">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path
+                        d="M0 7.76C0 3.301 3.493 0 8 0s8 3.301 8 7.76-3.493 7.76-8 7.76c-.81 0-1.586-.107-2.316-.307a.639.639 0 0 0-.427.03l-1.588.702a.64.64 0 0 1-.898-.566l-.044-1.423a.639.639 0 0 0-.215-.456C.956 12.108 0 10.092 0 7.76z" />
+                </svg>
+                LINEで問い合わせる
+            </a>
+        </div>
+    </header>
+
+    <!-- ヒーロー -->
+    <section class="hero">
+        <p class="hero-eyebrow">CoroHug × わんHug＋</p>
+        <h1>お洋服を、<em>着るケアに。</em><br>やさしさで包む、インナーウェア</h1>
+        <p class="hero-sub">皮膚がデリケートな子、シニアになって体温調節が難しくなった子のために。縫い目は全て外側へ、タグなし設計のオーガニックコットンインナー。</p>
+
+        <div class="hero-img-wrap">
+            <img src="https://images.unsplash.com/photo-1583511655826-05700d52f4d9?auto=format&fit=crop&w=800&q=80"
+                alt="CoroHugわん ケアウェア">
+        </div>
+        <p class="hero-caption">※モデル：5kg Mサイズ着用</p>
+
+        <p class="hero-price">¥4,980 <span>（税込・送料別）</span></p>
+        <a href="#cta" class="btn-main">LINEで注文・相談する</a>
+        <p class="btn-sub">↓ 詳しくスクロールして読む ↓</p>
+    </section>
+
+    <!-- こんな子に -->
+    <section class="section for-whom">
+        <div class="section-inner">
+            <p class="section-label">For your dog</p>
+            <h2 class="section-title">こんな子に選ばれています</h2>
+            <div class="divider"></div>
+            <div class="cards">
+                <div class="card">
+                    <div class="card-icon">🐾</div>
+                    <h3>皮膚がデリケートな子</h3>
+                    <p>アトピーや乾燥肌で、服のタグや縫い目が気になる子に。</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🌿</div>
+                    <h3>術後・療養中の子</h3>
+                    <p>傷口を保護しながら、ストレスなく過ごせる素材を。</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🌡️</div>
+                    <h3>体温調節が苦手なシニア犬</h3>
+                    <p>年を重ねて冷えやすくなった子の体をやさしく保温。</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🐩</div>
+                    <h3>ダックス・コーギーの子</h3>
+                    <p>お腹のすれが心配な胴長さんにうれしい専用丈設計。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- こだわりポイント -->
+    <section class="section">
+        <div class="section-inner">
+            <p class="section-label">Quality Points</p>
+            <h2 class="section-title">CoroHugわんの<br>5つのこだわり</h2>
+            <div class="divider"></div>
+            <div class="points-list">
+                <div class="point-item">
+                    <div class="point-num">01</div>
+                    <div class="point-body">
+                        <h3>縫い目はすべて外側に</h3>
+                        <p>皮膚に直接触れる面には縫い目がありません。デリケートな肌を傷つけない設計にこだわりました。</p>
+                    </div>
+                </div>
+                <div class="point-item">
+                    <div class="point-num">02</div>
+                    <div class="point-body">
+                        <h3>タグレス仕様</h3>
+                        <p>タグによる摩擦や痒みはゼロ。チクチクするものが何もない、完全タグレス設計です。</p>
+                    </div>
+                </div>
+                <div class="point-item">
+                    <div class="point-num">03</div>
+                    <div class="point-body">
+                        <h3>オーガニックコットン100%</h3>
+                        <p>農薬・化学肥料不使用のオーガニックコットンを使用。吸湿性・通気性に優れ、季節を問わず快適です。</p>
+                    </div>
+                </div>
+                <div class="point-item">
+                    <div class="point-num">04</div>
+                    <div class="point-body">
+                        <h3>伸縮性抜群で動きを妨げない</h3>
+                        <p>4方向ストレッチ素材で、お座り・立ち上がり・階段など、日常のあらゆる動作にフィット。</p>
+                    </div>
+                </div>
+                <div class="point-item">
+                    <div class="point-num">05</div>
+                    <div class="point-body">
+                        <h3>お腹すれ防止の専用丈</h3>
+                        <p>地面に近いお腹を保護するよう計算された丈感。ダックスフンドやコーギーに特に好評です。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 商品詳細 -->
+    <section class="section product-detail" id="product">
+        <div class="section-inner">
+            <p class="section-label">Product Detail</p>
+            <h2 class="section-title">商品詳細</h2>
+            <div class="divider"></div>
+            <div class="product-grid">
+                <div class="product-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1583511655826-05700d52f4d9?auto=format&fit=crop&w=800&q=80"
+                        alt="CoroHugわん いたわりインナー 商品画像">
+                </div>
+                <div class="product-specs">
+                    <h3
+                        style="font-family:'Noto Serif JP',serif; font-size:1.2rem; margin-bottom:18px; line-height:1.5;">
+                        コロの願い・いたわりインナー<br>
+                        <small
+                            style="font-size:0.85rem; font-weight:400; color:var(--text-light);">オーガニックコットン100%</small>
+                    </h3>
+                    <div class="price-block">
+                        <div class="price-main">¥4,980</div>
+                        <div class="price-sub">税込・送料別<br>ダックス用ロングサイズもご相談ください</div>
+                    </div>
+                    <div class="spec-block">
+                        <h4>素材</h4>
+                        <p>オーガニックコットン100%<br>（GOTS認証素材使用）</p>
+                    </div>
+                    <div class="spec-block">
+                        <h4>カラー</h4>
+                        <p>ナチュラルホワイト / ライトグレー</p>
+                    </div>
+                    <div class="spec-block">
+                        <h4>取り扱いサイズ</h4>
+                        <p>S / M / L（ダックス用ロングは別途）</p>
+                    </div>
+                    <div class="spec-block">
+                        <h4>ご注文・お問い合わせ</h4>
+                        <p>公式LINEよりお気軽にどうぞ。サイズのご相談も承ります。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- サイズガイド -->
+    <section class="section size-section">
+        <div class="section-inner">
+            <p class="section-label">Size Guide</p>
+            <h2 class="section-title">サイズガイド</h2>
+            <div class="divider"></div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>サイズ</th>
+                        <th>首回り（cm）</th>
+                        <th>胴回り（cm）</th>
+                        <th>着丈（cm）</th>
+                        <th>対象体重の目安</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>S</strong></td>
+                        <td>20〜23</td>
+                        <td>29〜35</td>
+                        <td>23</td>
+                        <td>〜3kg程度</td>
+                    </tr>
+                    <tr>
+                        <td><strong>M</strong></td>
+                        <td>23〜26</td>
+                        <td>35〜41</td>
+                        <td>27</td>
+                        <td>3〜6kg程度</td>
+                    </tr>
+                    <tr>
+                        <td><strong>L</strong></td>
+                        <td>26〜29</td>
+                        <td>41〜47</td>
+                        <td>31</td>
+                        <td>6〜10kg程度</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="size-note">※ 犬種や体型により異なります。採寸が難しい場合は、LINEでご相談ください。<br>ダックスフンド用ロングサイズもご用意しています。</p>
+        </div>
+    </section>
+
+    <!-- お客様の声 -->
+    <section class="section voices">
+        <div class="section-inner">
+            <p class="section-label">Voice</p>
+            <h2 class="section-title">お客様の声</h2>
+            <div class="divider"></div>
+            <div class="voice-cards">
+                <div class="voice-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="voice-text">アトピーがひどくて何を着せても嫌がっていたんですが、これは自分から近寄ってくるくらい嫌がりません。縫い目がないって大事なんですね。</p>
+                    <p class="voice-meta">Kさん / ミニチュアダックスフンド（9歳）</p>
+                </div>
+                <div class="voice-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="voice-text">術後に着せるものを探していて購入。傷口を舐めることもなく、本人もご機嫌で過ごしてくれました。素材がやわらかくて安心です。</p>
+                    <p class="voice-meta">Tさん / トイプードル（5歳）</p>
+                </div>
+                <div class="voice-card">
+                    <div class="stars">★★★★☆</div>
+                    <p class="voice-text">14歳のシニア犬なので体温調節が心配で。冬に着せてみたらぽかぽかしていてご機嫌です。LINEで丁寧に相談に乗っていただけて助かりました。</p>
+                    <p class="voice-meta">Nさん / コーギー（14歳）</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 最終CTA -->
+    <section class="final-cta" id="cta">
+        <div class="section-inner">
+            <p class="section-label">Order / Contact</p>
+            <h2 class="section-title">ご注文・サイズ相談は<br>公式LINEから</h2>
+            <div class="divider"></div>
+            <p class="section-desc">
+                お気軽にメッセージをご送信ください。<br>
+                サイズのご相談・ご注文・ご質問、なんでもどうぞ。<br>
+                担当者が直接ご案内いたします。
+            </p>
+            <a href="https://lin.ee/XXXXXXX" class="btn-line" target="_blank" rel="noopener noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" fill="white">
+                    <path
+                        d="M22 4C12.059 4 4 11.163 4 20c0 5.257 2.972 9.93 7.573 12.907-.333 1.241-1.074 4.638-1.23 5.36-.194.904.332 1.733 1.262 1.093 0 0 7.098-4.69 8.013-5.29.775.103 1.57.157 2.382.157 9.941 0 18-7.163 18-16S31.941 4 22 4z" />
+                </svg>
+                公式LINEで問い合わせ・注文する
+            </a>
+            <p class="btn-note">📍 わんHug＋ 公式LINE ／ 返信は営業時間内（10:00〜17:00）</p>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <ul class="footer-links">
+            <li><a href="https://corohirotiro.base.shop/privacy" target="_blank" rel="noopener">プライバシーポリシー</a></li>
+            <li><a href="https://corohirotiro.base.shop/law" target="_blank" rel="noopener">特定商取引法に基づく表記</a></li>
+        </ul>
+        <p class="footer-copy">販売者：コロヒロチロ ／ わんHug＋<br>&copy; 2025 Corohirotiro. All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>
