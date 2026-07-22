@@ -1,0 +1,490 @@
+@media (max-width:960px){
+
+    .hero-inner{
+
+        padding-bottom:64px;
+
+    }
+
+    .hero h1{
+
+        font-size:clamp(2.5rem,9vw,3.6rem);
+
+    }
+
+    .hero-actions{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+    .scroll-indicator{
+
+        display:none;
+
+    }
+
+}
+
+@media (max-width:640px){
+
+    .hero{
+
+        min-height:90vh;
+
+    }
+
+    .hero p br,
+    .hero h1 br{
+
+        display:none;
+
+    }
+
+}
+@media (max-width:960px){
+
+    .interlude{
+
+        padding-bottom:8rem;
+
+    }
+
+    .interlude-media img{
+
+        height:60vh;
+
+    }
+
+    .interlude-copy{
+
+        margin-top:64px;
+
+        font-size:2rem;
+
+    }
+
+}
+
+@media (max-width:640px){
+
+    .interlude-media img{
+
+        height:46vh;
+
+    }
+
+    .interlude-copy{
+
+        font-size:1.6rem;
+
+    }
+
+    .interlude-copy br{
+
+        display:none;
+
+    }
+
+}
+@media (max-width:960px){
+
+    .philosophy-grid{
+
+        grid-template-columns:1fr;
+
+        gap:48px;
+
+    }
+
+    .philosophy-body{
+
+        padding-top:0;
+
+    }
+
+}
+
+@media (max-width:640px){
+
+    .philosophy{
+
+        padding:8rem 0;
+
+    }
+
+    .philosophy-heading h2 br{
+
+        display:none;
+
+    }
+
+}
+@media (max-width:960px){
+
+    .statement-media img,
+    .statement-media video{
+
+        height:60vh;
+
+    }
+
+    .statement .container-text{
+
+        padding-top:64px;
+
+    }
+
+    /* 2カラムは縦積みにし、動画を中央へ */
+
+    .statement-split-inner,
+    .statement-flip .statement-split-inner{
+
+        grid-template-columns:1fr;
+
+        gap:56px;
+
+    }
+
+    .statement-flip .statement-media-portrait{
+
+        order:0;
+
+    }
+
+    .statement-media-portrait video{
+
+        height:60vh;
+
+        margin-inline:auto;
+
+    }
+
+}
+
+@media (max-width:640px){
+
+    .statement{
+
+        padding-bottom:8rem;
+
+    }
+
+    .statement-media img,
+    .statement-media video{
+
+        height:42vh;
+
+    }
+
+    /* 縦撮り動画はスマホでは画面幅いっぱいに見せる */
+
+    .statement-media-portrait video{
+
+        width:100%;
+
+        aspect-ratio:auto;
+
+        height:64vh;
+
+    }
+
+    .statement-title br{
+
+        display:none;
+
+    }
+
+}
+/* ==========================================================
+   PROCESS
+========================================================== */
+
+@media (max-width:1100px){
+
+    .process-item{
+
+        grid-template-columns:1fr;
+
+        gap:40px;
+
+    }
+
+    .process-number{
+
+        margin-bottom:8px;
+
+    }
+
+}
+
+@media (max-width:640px){
+
+    .process{
+
+        padding:8rem 0;
+
+    }
+
+    .process-heading{
+
+        margin-bottom:64px;
+
+    }
+
+    .process-list{
+
+        gap:96px;
+
+    }
+
+}
+/* ==========================================================
+   STRENGTHS INTRO
+========================================================== */
+
+@media (max-width:640px){
+
+    .strengths-intro{
+
+        padding-bottom:6rem;
+
+    }
+
+    .strengths-intro h2 br{
+
+        display:none;
+
+    }
+
+}
+/* ==========================================================
+   SERVICE
+========================================================== */
+
+@media (max-width:960px){
+
+    .service-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .service-item{
+
+        padding:48px 40px;
+
+    }
+
+    .service-heading{
+
+        margin-bottom:64px;
+
+    }
+
+}
+
+@media (max-width:640px){
+
+    .service{
+
+        padding:8rem 0;
+
+    }
+
+    .service-item{
+
+        padding:40px 28px;
+
+    }
+
+}
+/* ==========================================================
+   FACILITY
+========================================================== */
+
+@media (max-width:960px){
+
+    .facility-heading{
+
+        margin-bottom:64px;
+
+    }
+
+    .facility-groups{
+
+        gap:80px;
+
+    }
+
+    .facility-row{
+
+        grid-template-columns:1fr;
+
+        gap:12px;
+
+        padding:24px 0;
+
+    }
+
+}
+
+@media (max-width:640px){
+
+    .facility{
+
+        padding:8rem 0;
+
+    }
+
+    .facility-heading h2 br{
+
+        display:none;
+
+    }
+
+}
+/* ==========================================================
+   COMPANY
+========================================================== */
+
+@media (max-width:960px){
+
+    .company-grid{
+
+        grid-template-columns:1fr;
+
+        gap:48px;
+
+    }
+
+    .company-row{
+
+        grid-template-columns:130px 1fr;
+
+        gap:24px;
+
+    }
+
+}
+
+@media (max-width:640px){
+
+    .company{
+
+        padding:8rem 0;
+
+    }
+
+    .company-row{
+
+        grid-template-columns:1fr;
+
+        gap:4px;
+
+        padding:20px 0;
+
+    }
+
+}
+/* ==========================================================
+   WORKS
+========================================================== */
+
+@media (max-width:960px){
+
+    .work{
+
+        margin-bottom:120px;
+
+    }
+
+    .work-image img{
+
+        height:56vh;
+
+    }
+
+}
+
+@media (max-width:640px){
+
+    .works{
+
+        padding:8rem 0;
+
+    }
+
+    .works-heading{
+
+        margin-bottom:64px;
+
+    }
+
+    .work-image{
+
+        margin-bottom:40px;
+
+    }
+
+    .work-image img{
+
+        height:40vh;
+
+    }
+
+}
+/* ==========================================================
+   CONTACT
+========================================================== */
+
+@media (max-width:960px){
+
+    .contact-grid{
+
+        grid-template-columns:1fr;
+
+        gap:64px;
+
+    }
+
+}
+
+@media (max-width:640px){
+
+    .contact{
+
+        padding:8rem 0;
+
+    }
+
+    .btn-dark{
+
+        width:100%;
+
+        justify-content:center;
+
+    }
+
+}
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+@media (max-width:768px){
+
+    .footer-inner{
+
+        flex-direction:column;
+
+    }
+
+    .footer-info{
+
+        text-align:left;
+
+    }
+
+}

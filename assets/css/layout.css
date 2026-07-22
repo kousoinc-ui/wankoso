@@ -1,0 +1,35 @@
+.container{
+
+    width:min(var(--container), calc(100% - 80px));
+
+    margin-inline:auto;
+
+}
+
+.container-wide{
+
+    width:min(var(--container-wide), calc(100% - 80px));
+
+    margin-inline:auto;
+
+}
+
+.container-text{
+
+    width:min(var(--container-text), calc(100% - 48px));
+
+    margin-inline:auto;
+
+}
+
+.grid-2{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:96px;
+
+    align-items:center;
+
+}

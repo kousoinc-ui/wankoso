@@ -1,0 +1,91 @@
+:root {
+
+  /* ========= Colors ========= */
+
+  --color-white: #ffffff;
+  --color-background: #F8F8F6;
+
+  --color-text: #111111;
+  --color-text-light: #555555;
+
+  --color-line: #E8E8E8;
+
+  --color-accent: #B08D57;
+
+  --color-overlay: rgba(0, 0, 0, .38);
+
+
+  /* ========= Typography ========= */
+
+  --font-serif: "Noto Serif JP", serif;
+  --font-sans: "Noto Sans JP", sans-serif;
+  --font-number: "Inter", sans-serif;
+
+
+  /* ========= Font Size ========= */
+
+  --fs-hero: clamp(2.6rem, 4.5vw, 4.4rem);
+
+  --fs-h1: clamp(2.8rem, 5vw, 4.2rem);
+
+  --fs-h2: clamp(2rem, 4vw, 3rem);
+
+  --fs-h3: 1.75rem;
+
+  --fs-body: 1.0625rem;
+
+  --fs-small: .95rem;
+
+
+  /* ========= Line Height ========= */
+
+  --lh-title: 1.45;
+  --lh-body: 2;
+
+
+  /* ========= Letter Spacing ========= */
+
+  --ls-title: .08em;
+  --ls-body: .03em;
+
+
+  /* ========= Width ========= */
+
+  --container: 1280px;
+  --container-wide: 1440px;
+  --container-text: 720px;
+
+
+  /* ========= Space ========= */
+
+  --space-2xs: .5rem;
+  --space-xs: 1rem;
+  --space-sm: 2rem;
+  --space-md: 4rem;
+  --space-lg: 6rem;
+  --space-xl: 8rem;
+  --space-2xl: 12rem;
+  --space-section: 15rem;
+
+
+  /* ========= Radius ========= */
+
+  --radius: 4px;
+
+
+  /* ========= Border ========= */
+
+  --border: 1px solid var(--color-line);
+
+
+  /* ========= Shadow ========= */
+
+  --shadow: none;
+
+
+  /* ========= Animation ========= */
+
+  --duration: .8s;
+  --ease: cubic-bezier(.22,1,.36,1);
+
+}
