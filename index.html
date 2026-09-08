@@ -14,7 +14,7 @@
 
     <meta
         name="description"
-        content="大阪市西淀川区の株式会社野尻製作所は、銅・真鍮・アルミを中心とした精密機械加工会社です。ミクロン単位のはめ合い調整、試作1個からの短納期対応、メッキ・塗装・半田付けまで一括手配します。">
+        content="1920年創業。大阪市西淀川区の株式会社野尻製作所は、銅・真鍮・アルミを中心とした精密機械加工会社です。試作1個から、はめ合い調整、表面処理の一括手配まで対応します。">
 
     <meta
         name="keywords"
@@ -167,49 +167,49 @@
 
         </a>
 
-        <nav class="global-nav">
+        <nav class="global-nav" id="global-nav" aria-label="メインナビゲーション">
 
             <ul>
 
                 <li>
                     <a href="#philosophy">
-                        Philosophy
+                        私たちについて
                     </a>
                 </li>
 
                 <li>
-                    <a href="#process">
-                        Process
+                    <a href="#strengths">
+                        私たちの強み
                     </a>
                 </li>
 
                 <li>
                     <a href="#service">
-                        Service
+                        対応加工
                     </a>
                 </li>
 
                 <li>
                     <a href="#facility">
-                        Facility
+                        設備
                     </a>
                 </li>
 
                 <li>
                     <a href="#works">
-                        Works
+                        加工事例
                     </a>
                 </li>
 
                 <li>
                     <a href="#company">
-                        Company
+                        会社概要
                     </a>
                 </li>
 
                 <li>
                     <a href="#contact" class="contact-link">
-                        Contact
+                        加工相談
                     </a>
                 </li>
 
@@ -219,6 +219,8 @@
 
         <button
             class="menu-button"
+            type="button"
+            aria-controls="global-nav"
             aria-label="メニュー">
 
             <span></span>
@@ -257,46 +259,82 @@
         <div class="hero-content">
 
             <span class="hero-label">
-                PRECISION MACHINING IN OSAKA
+                大阪市西淀川区・姫里　創業1920年
             </span>
 
             <h1>
 
-                銅・真鍮・アルミの、
+                図面と、現物と、
                 <br>
-                精密機械加工。
+                百年の経験。
 
             </h1>
 
             <p>
 
-                大阪市西淀川区で、試作1個から小ロットまで。
+                銅・真鍮・アルミを中心とした精密機械加工。
                 <br>
-                はめ合い調整や表面処理の手配まで、丁寧に対応します。
+                汎用機とNC機を使い分け、試作1個から向き合います。
 
             </p>
 
             <div class="hero-actions">
 
-                <a href="#philosophy" class="btn-outline">
-                    野尻製作所について
+                <a href="#contact" class="btn-outline btn-primary">
+                    加工について相談する
                 </a>
 
-                <a href="#contact" class="btn-outline">
-                    加工について相談する
+                <a href="#works" class="btn-outline">
+                    加工事例を見る
                 </a>
 
             </div>
 
         </div>
 
-        <div class="scroll-indicator">
+        <dl class="hero-index" aria-label="対応内容">
+            <div>
+                <dt>主な素材</dt>
+                <dd>銅・真鍮・アルミ</dd>
+            </div>
+            <div>
+                <dt>対応数量</dt>
+                <dd>試作1個〜小ロット</dd>
+            </div>
+            <div>
+                <dt>仕上げ</dt>
+                <dd>表面処理まで一括手配</dd>
+            </div>
+        </dl>
 
-            <span>SCROLL</span>
+    </div>
 
-            <div class="scroll-line"></div>
+</section>
 
+<section class="legacy" aria-label="野尻製作所のものづくり">
+
+    <div class="container legacy-grid">
+
+        <div class="legacy-mark" aria-hidden="true">
+            <span>創業</span>
+            <strong>1920</strong>
+            <span>HIMESATO, OSAKA</span>
         </div>
+
+        <div class="legacy-copy">
+            <p class="legacy-lead">長く使う機械と、<br>新しく磨く技術。</p>
+            <p>
+                100年を超えて工場に残るのは、古さではありません。
+                汎用機の癖を読み、現物のわずかな違いに手を合わせる。
+                その経験を、NC機による安定した加工へつないでいます。
+            </p>
+        </div>
+
+        <ul class="material-index" aria-label="主な加工素材">
+            <li><span>Cu</span><strong>銅</strong></li>
+            <li><span>CuZn</span><strong>真鍮</strong></li>
+            <li><span>Al</span><strong>アルミ</strong></li>
+        </ul>
 
     </div>
 
@@ -337,7 +375,7 @@
             <div class="philosophy-heading">
 
                 <span class="section-label">
-                    Philosophy
+                    私たちの考え方 / Philosophy
                 </span>
 
                 <h2>
@@ -361,7 +399,9 @@
 
                 <p>
 
-                    汎用機による現物合わせと、NC機による安定した加工。
+                    1920年の創業以来、受け継いできたのは、
+                    図面の数字だけでは測れない経験と、仕事への誠実さです。
+                    古くから使い続ける汎用機と現代のNC機。
                     それぞれの良さを使い分けながら、
                     必要な精度と納期に向き合います。
 
@@ -387,7 +427,7 @@
     <div class="container">
 
         <span class="section-label">
-            Strengths
+            受け継いだ強み / Strengths
         </span>
 
         <h2>
@@ -397,6 +437,15 @@
             丁寧に向き合います。
 
         </h2>
+
+        <img
+            class="section-shaving"
+            src="assets/images/brass-shaving.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+            data-parallax
+            aria-hidden="true">
 
     </div>
 
@@ -614,7 +663,7 @@
         <div class="process-heading">
 
             <span class="section-label">
-                Process
+                ご相談から納品まで / Process
             </span>
 
             <h2>
@@ -633,6 +682,15 @@
             </p>
 
         </div>
+
+        <img
+            class="process-micrometer"
+            src="assets/images/micrometer.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+            data-parallax
+            aria-hidden="true">
 
         <div class="process-list">
 
@@ -766,7 +824,7 @@
         <div class="service-heading">
 
             <span class="section-label">
-                Service
+                できること / Service
             </span>
 
             <h2>
@@ -783,6 +841,15 @@
             </p>
 
         </div>
+
+        <img
+            class="service-bushing"
+            src="assets/images/brass-bushing.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+            data-parallax
+            aria-hidden="true">
 
         <div class="service-grid">
 
@@ -855,7 +922,7 @@
         <div class="facility-heading">
 
             <span class="section-label">
-                Facility
+                機械と道具 / Facility
             </span>
 
             <h2>
@@ -1256,7 +1323,7 @@
         <div class="works-heading">
 
             <span class="section-label">
-                Works
+                削ってきたもの / Works
             </span>
 
             <h2>
@@ -1367,6 +1434,25 @@
 
 </section>
 
+<aside class="inquiry-banner" aria-label="加工相談のご案内" data-fade>
+
+    <div class="container inquiry-banner-inner">
+
+        <div>
+            <span class="section-label">図面からのご相談 / Contact</span>
+            <h2>つくれるか分からない段階でも、<br>まずは図面をお見せください。</h2>
+            <p>材質・数量・希望納期を伺い、加工方法から一緒に考えます。</p>
+        </div>
+
+        <a href="#contact" class="inquiry-banner-link">
+            加工について相談する
+            <span aria-hidden="true">↗</span>
+        </a>
+
+    </div>
+
+</aside>
+
 <section class="company" id="company" data-fade>
 
     <div class="container">
@@ -1376,7 +1462,7 @@
             <div class="company-heading">
 
                 <span class="section-label">
-                    Company
+                    会社のこと / Company
                 </span>
 
                 <h2>
@@ -1446,7 +1532,7 @@
             <div class="contact-intro">
 
                 <span class="section-label">
-                    Contact
+                    加工のご相談 / Contact
                 </span>
 
                 <h2>
@@ -1477,6 +1563,20 @@
 
                 <div class="form-group">
 
+                    <label for="contact-type">ご相談の種類</label>
+
+                    <select id="contact-type" name="type" required>
+                        <option value="">選択してください</option>
+                        <option value="新規加工・試作のご相談">新規加工・試作のご相談</option>
+                        <option value="追加工・修理のご相談">追加工・修理のご相談</option>
+                        <option value="見積りのご依頼">見積りのご依頼</option>
+                        <option value="その他">その他</option>
+                    </select>
+
+                </div>
+
+                <div class="form-group">
+
                     <label for="contact-name">お名前</label>
 
                     <input
@@ -1485,6 +1585,18 @@
                         name="name"
                         autocomplete="name"
                         required>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="contact-phone">電話番号 <span class="form-optional">任意</span></label>
+
+                    <input
+                        type="tel"
+                        id="contact-phone"
+                        name="phone"
+                        autocomplete="tel">
 
                 </div>
 
@@ -1521,12 +1633,13 @@
                         id="contact-message"
                         name="message"
                         rows="6"
+                        placeholder="材質、数量、寸法、希望納期など、分かる範囲でご記入ください。"
                         required></textarea>
 
                 </div>
 
                 <button type="submit" class="btn-outline btn-dark">
-                    送信する
+                    メールで相談内容を送る
                 </button>
 
                 <p class="form-note">
@@ -1570,19 +1683,19 @@
 
             <ul>
 
-                <li><a href="#philosophy">Philosophy</a></li>
+                <li><a href="#philosophy">私たちについて</a></li>
 
-                <li><a href="#process">Process</a></li>
+                <li><a href="#strengths">私たちの強み</a></li>
 
-                <li><a href="#service">Service</a></li>
+                <li><a href="#service">対応加工</a></li>
 
-                <li><a href="#facility">Facility</a></li>
+                <li><a href="#facility">設備</a></li>
 
-                <li><a href="#works">Works</a></li>
+                <li><a href="#works">加工事例</a></li>
 
-                <li><a href="#company">Company</a></li>
+                <li><a href="#company">会社概要</a></li>
 
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact">加工相談</a></li>
 
             </ul>
 
@@ -1619,6 +1732,8 @@
 <script src="assets/js/menu.js"></script>
 
 <script src="assets/js/animation.js"></script>
+
+<script src="assets/js/decorations.js"></script>
 
 <script src="assets/js/main.js"></script>
 
